@@ -25,7 +25,7 @@ Present verification insights using a Business Intelligence (BI) dashboard.
 - High Performance: Processes documents in less than 3 seconds each, supporting parallel processing.
 
 ### Flowchart
-**Start**
+**1. Start**
 
 *The process starts when a user submits a document (image or PDF) and the corresponding form data.*
 
