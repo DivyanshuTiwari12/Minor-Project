@@ -25,57 +25,57 @@ Present verification insights using a Business Intelligence (BI) dashboard.
 - High Performance: Processes documents in less than 3 seconds each, supporting parallel processing.
 
 ### Flowchart
-    1. Start
+**Start**
 
-The process starts when a user submits a document (image or PDF) and the corresponding form data.
+*The process starts when a user submits a document (image or PDF) and the corresponding form data.*
 
-    2. Document Upload
+**2. Document Upload**
 
-The document is uploaded via the API.
+*The document is uploaded via the API.*
 
-OCR and Text Extraction
+*OCR and Text Extraction*
 
-Tesseract OCR extracts text from the document.
+*Tesseract OCR extracts text from the document.*
 
-The text is sent for Language Detection.
+*The text is sent for Language Detection.*
 
-    3. Language Detection
+**3. Language Detection**
 
-The system detects the language of the extracted text using    ML-based language detection.
+*The system detects the language of the extracted text using    ML-based language detection.*
 
-If the language is supported, proceed to data extraction.
+*If the language is supported, proceed to data extraction.*
 
-If the language is not supported, prompt for translation or reject.
+*If the language is not supported, prompt for translation or reject.*
     
-    4. ML Data Extraction (LayoutLM)
+**4. ML Data Extraction**
 
-A pre-trained LayoutLM model processes the document layout and extracts key entities such as names, dates, and scores.
+*A pre-trained LayoutLM model processes the document layout and extracts key entities such as names, dates, and scores.*
 
-Compare Extracted Data with Form Data
+*Compare Extracted Data with Form Data*
 
-The extracted data is compared with the data submitted in the application form using NLP and fuzzy matching.
+*The extracted data is compared with the data submitted in the application form using NLP and fuzzy matching.*
     
-    5. Mismatch Detection
+**5. Mismatch Detection**
 
-The system calculates a confidence score for each extracted entity.
+*The system calculates a confidence score for each extracted entity.*
 
-If the confidence score is high enough (above a defined threshold), the data is accepted.
+*If the confidence score is high enough (above a defined threshold), the data is accepted.*
 
-If mismatches are found (low confidence scores), the applicant is alerted for potential errors.
+*If mismatches are found (low confidence scores), the applicant is alerted for potential errors.*
     
-    6. Store Results
+**6. Store Results**
 
-The verification results (confidence scores, matches, mismatches) are stored in the system.
+*The verification results (confidence scores, matches, mismatches) are stored in the system.*
 
-    7. Visualization in BI Dashboard
+**7. Visualization in BI Dashboard**
 
-The results are sent to the BI Dashboard (built with Dash/Plotly) for visualization.
+*The results are sent to the BI Dashboard (built with Dash/Plotly) for visualization.*
 
-Admins can view verification status, confidence levels, and overall insights into the document verification process.
+*Admins can view verification status, confidence levels, and overall insights into the document verification process.*
 
-    8. End
+**8. End**
 
-The code will terminate.
+*The code will terminate.*
 
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/divyanshu-tiwari-b207b4225/)
