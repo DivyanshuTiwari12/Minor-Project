@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Verification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Verification</h1>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <label for="documentType">Select Document Type:</label>
+            <select id="documentType" name="documentType" required>
+                <option value="10th Marksheet">10th Marksheet</option>
+                <option value="12th Marksheet">12th Marksheet</option>
+                <option value="Aadhar Card">Aadhar Card</option>
+                <option value="PAN Card">PAN Card</option>
+            </select>
+
+            <label for="fileUpload">Upload Document:</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept=".pdf,.jpg,.jpeg,.png" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

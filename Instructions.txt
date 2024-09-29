@@ -1,0 +1,24 @@
+Instructions to Place the Project folder and Test the Functionality of 'Document Verification' webpage.
+
+1.Download XAMPP installer to configure - Apache , MySQL , PHP.
+  XAMPP Installer : https://www.apachefriends.org/download.html
+
+2.Open the XAMPP Control Panel and start the Apache and MySQL services.
+
+3.Open web browser and go to http://localhost/phpmyadmin. (This will help in managing the Database)
+  Here , you might need to create a database table and link it with 'php' code.
+  According to our 'php' code , run following SQL query using 'phpMyadmin' to avoid any errors: 
+  
+  CREATE TABLE documents (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    document_type VARCHAR(255) NOT NULL,
+    file_path VARCHAR(255) NOT NULL,
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+4.Place project folder ("Minor") in the 'htdocs' directory inside XAMPP installation folder (e.g., C:\xampp\htdocs\Minor).
+
+5.Access webpage by navigating to http://localhost/Minor/index.html
+
+6.Test functionality to ensure documents are saved in the uploads directory(check inside XAMPP/htdocs/Minor/uploads) and records are created in the documents table (check using phpMyadmin).
