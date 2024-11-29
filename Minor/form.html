@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Verification Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body><div class="container">
+        <h1>User Information Form</h1>
+        <form action="submit.php" method="POST" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+<input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="Please enter only letters." placeholder="Enter your name">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="aadhar">Aadhar Number:</label>
+            <input type="text" id="aadhar" name="aadhar" pattern="\d{12}" required placeholder="12-digit Aadhar Number">
+
+            <label for="pan">PAN Number:</label>
+            <input type="text" id="pan" name="pan" pattern="[A-Z]{5}\d{4}[A-Z]" required placeholder="PAN Number (ABCDE1234F)">
+
+            <label for="tenthPercentage">10th Percentage:</label>
+            <input type="number" id="tenthPercentage" name="tenthPercentage" min="0" max="100" required>
+
+            <label for="twelfthPercentage">12th Percentage:</label>
+            <input type="number" id="twelfthPercentage" name="twelfthPercentage" min="0" max="100" required>
+
+	    <label for="aadharFile">Upload Aadhar Card:</label>
+            <input type="file" id="aadharFile" name="aadharFile" accept=".jpg, .jpeg, .png, .pdf" required>
+
+            <label for="panFile">Upload PAN Card:</label>
+            <input type="file" id="panFile" name="panFile" accept=".jpg, .jpeg, .png, .pdf" required>
+
+            <label for="tenthFile">Upload 10th Marksheet:</label>
+            <input type="file" id="tenthFile" name="tenthFile" accept=".jpg, .jpeg, .png, .pdf" required>
+
+            <label for="twelfthFile">Upload 12th Marksheet:</label>
+            <input type="file" id="twelfthFile" name="twelfthFile" accept=".jpg, .jpeg, .png, .pdf" required>
+
+            <button type="submit">Submit</button>
+        </form>
+</body>
